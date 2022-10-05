@@ -1,6 +1,5 @@
 defmodule Easy.TwoSumTest do
   use ExUnit.Case
-  doctest LeetCode
   alias Easy.TwoSum
 
   test "test 1" do
