@@ -35,15 +35,15 @@ defmodule Easy.TwoSumA do
   #   end
   # end
 
-  def two_sum(arr, to_find) do
-    Enum.with_index(arr)
-    |> Enum.reduce_while([], fn {x, i}, acc ->
-      search = to_find - x
-
-      case Enum.find_index(arr, &(&1 == search)) do
-        nil -> {:cont, acc}
-        j -> {:halt, [i, j]}
-      end
-    end)
-  end
+  # def two_sum(arr, to_find) do
+  #   Enum.with_index(arr)
+  #   |> Enum.reduce_while([], fn {x, i}, acc ->
+  #     search = to_find - x
+  #
+  #     case Enum.find_index(arr, &(&1 == search)) do
+  #       nil -> {:cont, acc}
+  #       j -> {:halt, [i, j]}
+  #     end
+  #   end)
+  # end
 end
