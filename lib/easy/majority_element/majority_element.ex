@@ -4,10 +4,10 @@ defmodule Easy.MajorityElement.MajorityElement do
     frequency = (length(nums) - 1) / 2
 
     Enum.reduce_while(nums, %{}, fn x, acc ->
-      if Map.get(acc, "#{x}", 0) >= frequency do
+      if Map.get(acc, x, 0) >= frequency do
         {:halt, x}
       else
-        {:cont, Map.update(acc, "#{x}", 1, fn v -> v + 1 end)}
+        {:cont, Map.update(acc, x, 1, fn v -> v + 1 end)}
       end
     end)
   end
